@@ -1,8 +1,11 @@
 <!--qa.wxml-->
 <view class="container">
 
-  <view class="usermotto">
-    
-    <text bindtap="bindViewTap" class="zhimu">{{ currentChar }}</text>
+  <view class="zhiFather">
+
+    <text bindtap="bindViewTap" class="zhimu" 
+    style="color:{{color}}">
+      {{ currentChar }}
+      </text>
   </view>
 </view>

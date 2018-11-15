@@ -17,9 +17,15 @@ const formatNumber = n => {
 const upper = zhimu => {
   return zhimu.toUpperCase()
 }
+const randomOne = arr =>{
+  var n = Math.floor(Math.random() * arr.length + 1) - 1;  
+  return arr[n]
+}
+
 
 module.exports = {
   formatTime: formatTime,
   upper: upper,
+  randomOne: randomOne
 }
 

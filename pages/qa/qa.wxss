@@ -1,4 +1,15 @@
 /** qa.wxss**/
-.zhimu{
- font-size: x-large
+.zhiFather {
+  display: flex;
+  flex-direction:row;
+  align-items: center;
 }
+
+.zhimu{
+  font: 700 150px "";
+
+}
+/* .zhimuBorder{
+  border:
+} */
+
