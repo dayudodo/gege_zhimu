@@ -1,10 +1,11 @@
 <!--qa.wxml-->
 <view class="container">
 
-  <view class="zhiFather">
-
-    <text bindtap="bindViewTap" class="zhimu" 
-    style="color:{{color}}">
+  <button bindtap="nextGroup">-></button>
+  <button bindtap="rotate">rotate</button>
+  <!-- <button bindtap="changeFont">字</button> -->
+  <view class=""  bindtap="bindViewTap">
+    <text class="zhimu {{rotate}}" style="color:{{color}};font:{{ font }}">
       {{ currentChar }}
       </text>
   </view>
