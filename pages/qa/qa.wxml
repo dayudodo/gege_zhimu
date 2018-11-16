@@ -2,10 +2,10 @@
 <view class="container">
 
   <button bindtap="nextGroup">-></button>
-  <button bindtap="rotate">rotate</button>
+  <!-- <button bindtap="rotate">rotate</button> -->
   <!-- <button bindtap="changeFont">字</button> -->
   <view class=""  bindtap="bindViewTap">
-    <text class="zhimu {{rotate}}" style="color:{{color}};font:{{ font }}">
+    <text class="zhimu transition" style="color:{{color}};font:{{ font }}">
       {{ currentChar }}
       </text>
   </view>

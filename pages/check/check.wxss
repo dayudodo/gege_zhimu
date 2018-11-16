@@ -1,0 +1,21 @@
+.father{
+    height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  
+
+  
+}
+
+.option{
+  flex:1;
+  
+  font: 700 100px "";
+  color: red;
+}
+
+.listenButton{
+  margin-top: 50px;
+  flex:1;
+}

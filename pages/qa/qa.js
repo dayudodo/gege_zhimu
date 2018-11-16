@@ -25,7 +25,7 @@ Page({
     color: colors[0],
     font: '黑体',
     currentChar: '',
-    rotate: ''
+    transition: ''
   },
   onLoad: function() {
     this.setData({
@@ -62,8 +62,8 @@ Page({
   changeFont:function(){
     // this.setData({font: '700 150px 宋体'})
   },
-  rotate:function(){
-    this.setData({rotate: 'rotate'})
+  transition:function(){
+    this.setData({transition: 'transition'})
   }
 
 })

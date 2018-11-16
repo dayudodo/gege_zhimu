@@ -1,0 +1,10 @@
+<!--check.wxml-->
+<view class="father">
+  <view>
+    <text bindtap='tapChar' data-char="A"  class="option">A</text>
+  </view>
+  <view>
+    <text  bindtap='tapChar'  data-char="B"  class="option">B</text>
+  </view>
+  <button class="listenButton" bindtap='listenMe'>listen</button>
+</view>
