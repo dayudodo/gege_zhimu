@@ -7,4 +7,5 @@
     <text  bindtap='tapChar'  data-char="B"  class="option">B</text>
   </view>
   <button class="listenButton" bindtap='listenMe'>listen</button>
+  <audio id='mp3' src="{{ mp3Source }}" controls></audio>
 </view>
