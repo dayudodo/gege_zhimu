@@ -1,11 +1,10 @@
 <!--check.wxml-->
 <view class="father">
-  <view class="selector">
-    <text bindtap='tapChar' data-char="A" class="option">A</text>
+  <view class="selector" wx:for="{{options}}" wx:key>
+  
+    <text bindtap='tapChar' data-char="{{item}}" class="option">{{item}}</text>
   </view>
-  <view>
-    <text bindtap='tapChar' data-char="B" class="option">B</text>
-  </view>
-  <button class="listenButton" bindtap='listenMe'>listen</button>
+
+  <button class="listenButton" bindtap='playQuestion'>listen</button>
   <audio id='myAudio' src="{{ mp3Source }}" controls></audio>
 </view>
