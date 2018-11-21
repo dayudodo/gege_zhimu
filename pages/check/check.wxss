@@ -1,21 +1,49 @@
-.father{
-    height: 100%;
+.father {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items:center;
-  
-
-  
+  align-items: center;
 }
 
-.option{
-  flex:1;
-  
+.option {
+  flex: 1;
   font: 700 100px "";
   color: red;
 }
 
-.listenButton{
+.play {
   margin-top: 50px;
-  flex:1;
+  height: 100px;
+  width: 100px;
+}
+
+.listenButton {
+  margin-top: 50px;
+  flex: 1;
+}
+
+.image-rotate {
+  z-index: 2;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  height: 280rpx;
+  width: 280rpx;
+  border-radius: 140rpx;
+  animation: headRotate 6s linear infinite;
+}
+
+/* 头像旋转效果  */
+
+@keyframes headRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
