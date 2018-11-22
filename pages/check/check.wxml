@@ -5,6 +5,6 @@
     <text bindtap='tapChar' data-char="{{item}}" class="option">{{item}}</text>
   </view>
 
-  <image src='play.jpg' class="play image-rotate" bindtap='playQuestion'></image>
+  <image src='play.jpg' class="play {{playEffect}}" bindtap='playQuestion'></image>
   <audio id='myAudio' src="{{ mp3Source }}"></audio>
 </view>

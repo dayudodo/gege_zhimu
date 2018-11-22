@@ -47,7 +47,8 @@ function makeQuestion() {
 Page({
   data: {
     mp3Source: mainhttp + "a.mp3",
-    options: []
+    options: [],
+    playEffect: '',
   },
   onReady: function(e) {
     // 使用 wx.createAudioContext 获取 audio 上下文 context
@@ -63,6 +64,14 @@ Page({
 
   playQuestion: function() {
     // console.log('a')
+    this.setData({
+      playEffect: 'animated bounceIn'
+    })
+    setTimeout(() => {
+      this.setData({
+        playEffect: ''
+      })
+    }, 750)
     this.audioCtx.pause()
     this.audioCtx.setSrc(getCharSound(currentQ))
     this.audioCtx.play()
@@ -99,6 +108,10 @@ Page({
 
   },
   nextQuestion: function() {
+    //下一个问题之前，应该先初始化一下，这包括动画效果要先取消
+    this.setData({
+      playEffect: ''
+    })
     if (qIndex + 1 == alphabet.length) {
       //最后一个测试完成，给予奖励！
 
