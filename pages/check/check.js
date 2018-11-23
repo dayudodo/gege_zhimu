@@ -1,4 +1,5 @@
 //check.js
+const util = require('../../utils/util.js')
 const mainhttp = "https://www.gsenglish.cn/zhimu/"
 const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
 //问题就来自于26个字母，自然也是大写的
@@ -49,8 +50,10 @@ Page({
     mp3Source: mainhttp + "a.mp3",
     options: [],
     playEffect: '',
+    color: '',
   },
   onReady: function(e) {
+    this.DiffColors = new util.DiffColors()
     // 使用 wx.createAudioContext 获取 audio 上下文 context
     this.audioCtx = wx.createAudioContext('myAudio')
     this.changeOptions()
@@ -108,9 +111,12 @@ Page({
 
   },
   nextQuestion: function() {
+    let color = this.DiffColors.next()
+    console.log(color)
     //下一个问题之前，应该先初始化一下，这包括动画效果要先取消
     this.setData({
-      playEffect: ''
+      playEffect: '',
+      color: color
     })
     if (qIndex + 1 == alphabet.length) {
       //最后一个测试完成，给予奖励！

@@ -2,7 +2,7 @@
 <view class="father">
   <view class="selector" wx:for="{{options}}" wx:key>
 
-    <text bindtap='tapChar' data-char="{{item}}" class="option">{{item}}</text>
+    <text bindtap='tapChar' data-char="{{item}}" class="option" style="color:{{color}};">{{item}}</text>
   </view>
 
   <image src='play.jpg' class="play {{playEffect}}" bindtap='playQuestion'></image>
