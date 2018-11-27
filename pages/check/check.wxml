@@ -1,6 +1,6 @@
 <!--check.wxml-->
 <view class="father">
-  <view class="selector" wx:for="{{options}}" wx:key>
+  <view class="selector  {{optionEffect}}" wx:for="{{options}}" wx:key>
 
     <text bindtap='tapChar' data-char="{{item}}" class="option" style="color:{{color}};">{{item}}</text>
   </view>

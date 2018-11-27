@@ -50,6 +50,7 @@ Page({
     mp3Source: mainhttp + "a.mp3",
     options: [],
     playEffect: '',
+    optionEffect:'',
     color: '',
   },
   onReady: function(e) {
@@ -106,8 +107,14 @@ Page({
     let options = shuffle([Upper(currentQ), Upper(sample(alphabet))])
     console.log("options: ", options)
     this.setData({
+      optionEffect: 'animated flip',
       options: options
     })
+    setTimeout(() => {
+      this.setData({
+        optionEffect: ''
+      })
+    }, 750)
 
   },
   nextQuestion: function() {
