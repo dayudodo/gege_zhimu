@@ -1,8 +1,12 @@
 //check.js
 const util = require('../../utils/util.js')
 const mainhttp = "https://www.gsenglish.cn/zhimu/"
-const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
 //问题就来自于26个字母，自然也是大写的
+const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
+//字母选项变化效果
+const optionEffect = 'animated flip'
+//播放按钮点击效果
+const playEffect = ' animated bounceIn'
 
 //变大写，简单点儿
 function Upper(c) {
@@ -19,6 +23,7 @@ var sample = function(arr) {
   return arr[index]
 
 };
+//打乱数组的顺序
 var shuffle = function(arr) {
   return arr.sort(function() {
     return .5 - Math.random();
@@ -69,7 +74,7 @@ Page({
   playQuestion: function() {
     // console.log('a')
     this.setData({
-      playEffect: 'animated bounceIn'
+      playEffect: playEffect
     })
     setTimeout(() => {
       this.setData({
@@ -107,7 +112,7 @@ Page({
     let options = shuffle([Upper(currentQ), Upper(sample(alphabet))])
     console.log("options: ", options)
     this.setData({
-      optionEffect: 'animated flip',
+      optionEffect: optionEffect,
       options: options
     })
     setTimeout(() => {
