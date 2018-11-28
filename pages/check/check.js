@@ -4,7 +4,7 @@ const mainhttp = "https://www.gsenglish.cn/zhimu/"
 //问题就来自于26个字母，自然也是大写的
 const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
 //字母选项变化效果
-const optionEffect = 'animated flip'
+const optionEffect = 'animated jackInTheBox'
 //播放按钮点击效果
 const playEffect = ' animated bounceIn'
 

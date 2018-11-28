@@ -1,8 +1,9 @@
 <!--check.wxml-->
 <view class="father  {{optionEffect}}">
   <view class="selector " wx:for="{{options}}" wx:key>
-
-    <text bindtap='tapChar' data-char="{{item}}" class="option" style="color:{{color}};">{{item}}</text>
+    <view bindtap='tapChar' data-char="{{item}}" class="option">
+      <text style="color:{{color}};" class="zimu" >{{item}}</text>
+    </view>
   </view>
 
   <image src='play.jpg' class="play {{playEffect}}" bindtap='playQuestion'></image>
