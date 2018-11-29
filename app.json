@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/study/study",
     "pages/qa/qa",
     "pages/check/check",
     "pages/index/index"

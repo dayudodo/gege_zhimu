@@ -1,0 +1,30 @@
+.options{
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  /* box-sizing: border-box; */
+  /* background-color: black; */
+}
+
+.zimu{
+/* flex-direction: row; */
+ /* align-items: center; */
+ /* justify-content: center;
+  */
+  /* justify-items: center; */
+ height:250px;
+ width:100%;
+ font: 700 100px '';
+ color:white;
+}
+.char{
+  /* justify-self: center;
+   */
+   align-self: center;
+}
+
+.bc_green {background: green; }
+.bc_red {background: red; }
+.bc_blue {background: blue; }
