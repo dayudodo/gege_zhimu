@@ -22,7 +22,7 @@ var current_group = zhimu_group[group_index]
 Page({
   data: {
     mp3Source: util.getCharSound('a'),
-    color: colors[0],
+    tapEffect: '',
   },
   onLoad: function () {
     this.setData({
@@ -35,20 +35,15 @@ Page({
     this.audioCtx = wx.createAudioContext('myAudio')
   },
   //事件处理函数
-  bindViewTap: function () {
-    // console.log(this.data.currentChar)
-    // this.setData({color: util.randomOne(colors)})
-    color_index = plus(color_index, colors)
-    // console.log(color_index)
-    char_index = plus(char_index, current_group)
-    let getCurrentChar = util.upper(current_group[char_index])
+  charTap: function () {
     this.setData({
-      color: colors[color_index],
-      currentChar: getCurrentChar
+      tapEffect: 'animate bounceIn'
     })
-    this.audioCtx.pause()
-    this.audioCtx.setSrc(util.getCharSound(this.data.currentChar))
-    this.audioCtx.play()
+    setTimeout(()=>{
+      this.setData({
+        tapEffect: ''
+      })
+    },750)
   },
   nextGroup: function () {
     //下一组字母开始的时候起始序号为0

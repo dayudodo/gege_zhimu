@@ -2,8 +2,8 @@
 <view class="options">
 
 
-  <view class="zimu bc_red">
-    <view class="char">A</view>
+  <view class="zimu bc_red {{tapEffect}}" bindtap='charTap' id="first">
+    A
   </view>
   <view class="zimu bc_green">
     <text class="char">B</text>

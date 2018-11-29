@@ -1,3 +1,5 @@
+@import "../animate.wxss";
+
 .options{
   height: 300px;
   display: flex;
@@ -9,15 +11,11 @@
 }
 
 .zimu{
-/* flex-direction: row; */
- /* align-items: center; */
- /* justify-content: center;
-  */
-  /* justify-items: center; */
  height:250px;
  width:100%;
  font: 700 100px '';
  color:white;
+ text-align: center;
 }
 .char{
   /* justify-self: center;
