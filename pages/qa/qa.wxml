@@ -9,4 +9,5 @@
       {{ currentChar }}
       </text>
   </view>
+  <audio id='myAudio' src="{{ mp3Source }}" ></audio>
 </view>

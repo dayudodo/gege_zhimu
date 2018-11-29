@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/check/check",
     "pages/qa/qa",
+    "pages/check/check",
     "pages/index/index"
     
   ],

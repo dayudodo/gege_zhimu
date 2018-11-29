@@ -57,6 +57,7 @@ Page({
     playEffect: '',
     optionEffect:'',
     color: '',
+    
   },
   onReady: function(e) {
     this.DiffColors = new util.DiffColors()

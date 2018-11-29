@@ -42,9 +42,16 @@ class DiffColors  {
 
 }
 
+const mainhttp = "https://www.gsenglish.cn/zhimu/"
+//获取到字母的声音
+function getCharSound(q) {
+  return `${mainhttp}${q.toLowerCase()}.mp3`
+}
+
 module.exports = {
   formatTime: formatTime,
   upper: upper,
   randomOne: randomOne,
   DiffColors: DiffColors,
+  getCharSound: getCharSound,
 }
