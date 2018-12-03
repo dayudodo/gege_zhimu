@@ -1,7 +1,7 @@
 //qs.js
 const util = require('../../utils/util.js')
 const zhimu_group = ['abcd', 'efgh', 'ijkl', 'mnop', 'qrst', 'uvw', 'xyz']
-const colors = ['red', 'orange', 'green', 'white', 'blue', 'brown', 'cyan']
+const colors = ['red', 'orange', 'green', 'black', 'blue', 'brown', 'cyan']
 // const font_groups = ['黑体','宋体']
 const plus = (i, arr) => {
   var result;
@@ -21,52 +21,61 @@ var current_group = zhimu_group[group_index]
 
 Page({
   data: {
-    mp3Source: util.getCharSound('a'),
-    tapEffect: '',
+    colorGroup: [],
+    currentGroup: [],
   },
-  onLoad: function () {
+  onLoad: function() {
     this.setData({
-      currentChar: util.upper(current_group[char_index])
+      colorGroup: this.getColorGroup(),
+      currentGroup: this.getCurrentCharGroup(),
     })
 
   },
-  onReady: function (e) {
-    // 使用 wx.createAudioContext 获取 audio 上下文 context
-    this.audioCtx = wx.createAudioContext('myAudio')
+  onShow:function(){
+    console.log(this.data)
   },
-  //事件处理函数
-  charTap: function () {
-    this.setData({
-      tapEffect: 'animate bounceIn'
-    })
-    setTimeout(()=>{
-      this.setData({
-        tapEffect: ''
-      })
-    },750)
+  onReady: function(e) {
   },
-  nextGroup: function () {
-    //下一组字母开始的时候起始序号为0
-    char_index = 0
-    group_index = plus(group_index, zhimu_group)
+  getColorGroup: function() {
+    //获取到颜色组供自定义组件使用！
+    let group = []
+    for (var i in current_group) {
+      let color_name=colors[color_index]
+      color_index = plus(color_index, colors)
+      group.push(color_name)
+    }
+    console.log("group:",group)
+    return group;
+  },
+  getCurrentCharGroup:function(){
+    let group=[]
     //当前字母组改变
     current_group = zhimu_group[group_index]
-    let getCurrentChar = util.upper(current_group[char_index])
-    color_index = plus(color_index, colors)
+    for (let i in Array.from(current_group)) {
+      group.push(current_group[i].toUpperCase())
+    }
+    //先显示出来，因为onLoad也调用了此方法！
+    group_index = plus(group_index, zhimu_group)
+    return group;
+  },
+  nextGroup: function() {
+
+
     this.setData({
-      color: colors[color_index],
-      currentChar: getCurrentChar,
-      mp3Source: util.getCharSound(getCurrentChar)
+      colorGroup: this.getColorGroup(),
+      currentGroup: this.getCurrentCharGroup(),
     })
     //下一组需要先调用一下声音播放，并且还要把当前的mp3Source改变一下
     this.audioCtx.pause()
     this.audioCtx.play()
   },
-  changeFont: function () {
+  changeFont: function() {
     // this.setData({font: '700 150px 宋体'})
   },
-  transition: function () {
-    this.setData({ transition: 'transition' })
+  transition: function() {
+    this.setData({
+      transition: 'transition'
+    })
   }
 
 })

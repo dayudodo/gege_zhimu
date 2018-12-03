@@ -1,11 +1,9 @@
 <!--study.wxml-->
-<view class="">
+<view wx:for="{{colorGroup}}" wx:for-index="idx" wx:key="*this">
 
-  <charItem background="red" char="A"> </charItem>
-  <charItem background="green" char="B"> </charItem>
-  <charItem background="blue" char="C"> </charItem>
-  <charItem background="black" char="D"> </charItem>
+  <charItem background="{{item}}" char="{{currentGroup[idx]}}"> </charItem>
+
 
 </view>
 
-<audio id='myAudio' src="{{ mp3Source }}"></audio>
+<!-- <audio id='myAudio' src="{{ mp3Source }}"></audio> -->

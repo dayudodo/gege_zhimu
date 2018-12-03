@@ -6,17 +6,18 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    background:{
-      type:String,
-      value:'',
+    background: {
+      type: String,
+      value: '',
     },
-    char:{
-      type:String,
-      value:'',
+    char: {
+      type: String,
+      value: '',
     },
-    tapEffect:{
-      type:String,
-      value:'',
+    tapEffect: {
+      type: String,
+      value: '',
+
     }
 
   },
@@ -27,12 +28,12 @@ Component({
   data: {
     someOthers: 1,
   },
-
   /**
    * 组件的方法列表
    */
   methods: {
-    clickChar:function(){
+
+    clickChar: function() {
       this.setData({
         tapEffect: 'animate bounceIn'
       })
@@ -43,12 +44,13 @@ Component({
       }, 750)
       this.play(this.properties.char)
     },
-    play(char){
+    play(char) {
       wx.playBackgroundAudio({
         dataUrl: util.getCharSound(char),
         title: '',
         coverImgUrl: ''
       })
     }
-  }
+  },
+
 })
