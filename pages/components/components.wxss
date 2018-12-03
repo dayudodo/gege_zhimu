@@ -1,0 +1,19 @@
+/* pages/components.wxss */
+@import "../animate.wxss";
+
+.options{
+  /* height: 300px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  /* box-sizing: border-box; */
+  /* background-color: black; */
+}
+.zimu{
+ flex: 1;
+ width:100%;
+ font: 700 100px '';
+ color:white;
+ text-align: center;
+}

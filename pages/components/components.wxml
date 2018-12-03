@@ -1,0 +1,6 @@
+<!--pages/components.wxml-->
+<view class="options">
+  <view class="zimu {{tapEffect}} " style="background:{{background}}">
+    <view class="char" bindtap='clickChar'>{{char}}</view>
+  </view>
+</view>

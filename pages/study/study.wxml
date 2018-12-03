@@ -1,16 +1,11 @@
 <!--study.wxml-->
-<view class="options">
+<view class="">
 
+  <charItem background="red" char="A"> </charItem>
+  <charItem background="green" char="B"> </charItem>
+  <charItem background="blue" char="C"> </charItem>
+  <charItem background="black" char="D"> </charItem>
 
-  <view class="zimu bc_red {{tapEffect}}" bindtap='charTap' id="first">
-    A
-  </view>
-  <view class="zimu bc_green">
-    <text class="char">B</text>
-  </view>
-  <view class="zimu bc_blue">
-    <text class="char">C</text>
-  </view>
 </view>
-Ï
+
 <audio id='myAudio' src="{{ mp3Source }}"></audio>
