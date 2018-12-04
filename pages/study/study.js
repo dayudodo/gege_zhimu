@@ -50,11 +50,9 @@ Page({
   getCurrentCharGroup:function(){
     let group=[]
     //当前字母组改变
-    current_group = zhimu_group[group_index]
-    for (let i in Array.from(current_group)) {
-      group.push(current_group[i].toUpperCase())
-    }
-    //先显示出来，因为onLoad也调用了此方法！
+    current_group = Array.from(zhimu_group[group_index])
+    group=current_group.map(char=>char.toUpperCase())
+    //先显示出来，因为onLoad也调用了此方法！更新索引为下一次做准备
     group_index = plus(group_index, zhimu_group)
     return group;
   },
