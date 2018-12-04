@@ -1,26 +1,7 @@
 @import "../animate.wxss";
 
-.options{
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-  /* box-sizing: border-box; */
-  /* background-color: black; */
-}
-
-.zimu{
- height:250px;
- width:100%;
- font: 700 100px '';
- color:white;
- text-align: center;
-}
-.char{
-  /* justify-self: center;
-   */
-   align-self: center;
+.scroll-view{
+  /* height: 110%; */
 }
 
 .bc_green {background: green; }

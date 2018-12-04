@@ -22,19 +22,23 @@ var current_group = zhimu_group[group_index]
 Page({
   data: {
     colorGroup: [],
-    currentGroup: [],
+    currentCharGroup: [],
   },
   onLoad: function() {
     this.setData({
       colorGroup: this.getColorGroup(),
-      currentGroup: this.getCurrentCharGroup(),
+      currentCharGroup: this.getCurrentCharGroup(),
     })
 
   },
   onShow:function(){
-    console.log(this.data)
+    // console.log(this.data)
   },
   onReady: function(e) {
+  },
+  onReachBottom:function(){
+    // console.log('at botton')
+    this.nextGroup()
   },
   getColorGroup: function() {
     //获取到颜色组供自定义组件使用！
@@ -61,11 +65,8 @@ Page({
 
     this.setData({
       colorGroup: this.getColorGroup(),
-      currentGroup: this.getCurrentCharGroup(),
+      currentCharGroup: this.getCurrentCharGroup(),
     })
-    //下一组需要先调用一下声音播放，并且还要把当前的mp3Source改变一下
-    this.audioCtx.pause()
-    this.audioCtx.play()
   },
   changeFont: function() {
     // this.setData({font: '700 150px 宋体'})

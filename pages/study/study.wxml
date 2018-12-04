@@ -1,9 +1,9 @@
 <!--study.wxml-->
-<view wx:for="{{colorGroup}}" wx:for-index="idx" wx:key="*this">
+<scroll-view class="scroll-view" scroll-y wx:for="{{colorGroup}}" wx:for-index="idx" wx:key="*this">
 
-  <charItem background="{{item}}" char="{{currentGroup[idx]}}"> </charItem>
+  <charItem background="{{item}}" char="{{currentCharGroup[idx]}}"> </charItem>
 
 
-</view>
+</scroll-view>
 
 <!-- <audio id='myAudio' src="{{ mp3Source }}"></audio> -->
