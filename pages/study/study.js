@@ -1,6 +1,6 @@
 //qs.js
 const util = require('../../utils/util.js')
-const zhimu_group = ['abcd', 'efgh', 'ijkl', 'mnop', 'qrst', 'uvw', 'xyz']
+const zhimu_group = ['abcd', 'efgh', 'ijkl', 'mnop', 'qrst', 'uvwx', 'yz']
 const colors = ['red', 'orange', 'green', 'black', 'blue', 'brown', 'cyan']
 // const font_groups = ['黑体','宋体']
 const plus = (i, arr) => {
@@ -37,9 +37,12 @@ Page({
   onReady: function(e) {
   },
   onReachBottom:function(){
-    // console.log('at botton')
+    // console.log('onReachBottom')
     this.nextGroup()
   },
+  // pullUpNext:function(){
+  //   console.log('pullUpNext')
+  // },
   getColorGroup: function() {
     //获取到颜色组供自定义组件使用！
     let group = []

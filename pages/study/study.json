@@ -1,5 +1,6 @@
 {
     "usingComponents": {
       "charItem": "../components/charItem"
-    }
+    },
+    "onReachBottomDistance": 50
 }
