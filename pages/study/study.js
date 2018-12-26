@@ -9,6 +9,7 @@ const plus = (i, arr) => {
   return result;
 }
 
+var g_height; //当前窗口的高度  
 //字母颜色索引，每次点击的时候颜色都不同！
 var color_index = 0;
 //字母索引，需要显示哪个位置的索引
@@ -25,6 +26,12 @@ Page({
     currentCharGroup: [],
   },
   onLoad: function() {
+    wx.getSystemInfo({
+      success: function (res) {
+        g_height = res.windowHeight
+        console.log(g_height)
+      },
+    })
     this.setData({
       colorGroup: this.getColorGroup(),
       currentCharGroup: this.getCurrentCharGroup(),

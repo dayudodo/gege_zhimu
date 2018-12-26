@@ -1,8 +1,6 @@
 @import "../animate.wxss";
 
-.scroll-view{
-  /* height: 110%; */
-}
+
 
 .bc_green {background: green; }
 .bc_red {background: red; }
