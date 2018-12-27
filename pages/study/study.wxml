@@ -1,9 +1,13 @@
 <!--study.wxml-->
-<view class="" scroll-y wx:for="{{colorGroup}}" wx:for-index="idx" wx:key="*this" style="height: 320rpx;" >
+<view>
+  <view class="" scroll-y wx:for="{{colorGroup}}" wx:for-index="idx" wx:key="*this" style="height: 240rpx;">
 
-  <charItem background="{{item}}" char="{{currentCharGroup[idx]}}"> </charItem>
+    <charItem background="{{item}}" char="{{currentCharGroup[idx]}}"> </charItem>
 
 
+  </view>
+  <button bindtap='tapPrev' >←</button>
+  <button bindtap='tapNext' >→</button>
 </view>
 
 <!-- <audio id='myAudio' src="{{ mp3Source }}"></audio> -->
