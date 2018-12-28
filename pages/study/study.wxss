@@ -5,3 +5,22 @@
 .bc_green {background: green; }
 .bc_red {background: red; }
 .bc_blue {background: blue; }
+
+.btn_group{
+  /* flex: 0 0 auto; */
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  /* margin-bottom: 10px; */
+  /* align-self: flex-end; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.btn{
+  color: white;
+  background-color: orange;
+  width: 40%;
+}

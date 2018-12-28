@@ -6,8 +6,10 @@
 
 
   </view>
-  <button bindtap='tapPrev' >←</button>
-  <button bindtap='tapNext' >→</button>
+  <view class="btn_group">
+    <button bindtap='tapPrev' class="btn">←</button>
+    <button bindtap='tapNext' class="btn">→</button>
+  </view>
 </view>
 
 <!-- <audio id='myAudio' src="{{ mp3Source }}"></audio> -->
