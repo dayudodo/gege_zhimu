@@ -1,7 +1,7 @@
 //qs.js
 const util = require('../../utils/util.js')
 const zhimu_group = ['abcd', 'efgh', 'ijkl', 'mnop', 'qrst', 'uvwx', 'yz']
-const colors = ['red', 'orange', 'green', 'black', 'blue', 'brown', 'cyan']
+const colors = ['red', 'orange', 'green', 'blue', 'brown', 'cyan']
 // const font_groups = ['黑体','宋体']
 var plus = function(i, arr) {
   var result;

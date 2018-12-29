@@ -1,5 +1,5 @@
 <!--study.wxml-->
-<view>
+<view class="group_container">
   <view class="" scroll-y wx:for="{{colorGroup}}" wx:for-index="idx" wx:key="*this" style="height: 240rpx;">
 
     <charItem background="{{item}}" char="{{currentCharGroup[idx]}}"> </charItem>
@@ -7,8 +7,8 @@
 
   </view>
   <view class="btn_group">
-    <button bindtap='tapPrev' class="btn">←</button>
-    <button bindtap='tapNext' class="btn">→</button>
+    <button bindtap='tapPrev' class="btn">◀️</button>
+    <button bindtap='tapNext' class="btn">▶</button>
   </view>
 </view>
 

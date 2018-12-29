@@ -1,11 +1,8 @@
 @import "../animate.wxss";
 
-
-
-.bc_green {background: green; }
-.bc_red {background: red; }
-.bc_blue {background: blue; }
-
+.group_container{
+  background-color: black;
+}
 .btn_group{
   /* flex: 0 0 auto; */
   display: flex;
